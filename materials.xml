@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <materials>
-  <material depletable="true" id="1" name="Fuel UO2" temperature="1172.0" volume="30830.702802405583">
+  <material depletable="true" id="1" name="Fuel UO2" temperature="1474" volume="9214646.31578057">
     <density units="g/cm3" value="10.98"/>
     <nuclide ao="0.048" name="U235"/>
     <nuclide ao="0.952" name="U238"/>
     <nuclide ao="1.999242" name="O16"/>
     <nuclide ao="0.000758" name="O17"/>
   </material>
-  <material id="2" name="Helium" temperature="691.0" volume="2969.9888097542225">
+  <material id="2" name="Helium" temperature="691" volume="1480832.0911774512">
     <density units="g/cm3" value="1.78e-06"/>
     <nuclide ao="2e-06" name="He3"/>
     <nuclide ao="0.999998" name="He4"/>
   </material>
-  <material id="3" name="Zircaloy" temperature="691.0" volume="4711.016732713609">
+  <material id="3" name="Zircaloy" temperature="691" volume="2357061.9995346144">
     <density units="g/cm3" value="6.56"/>
     <nuclide ao="0.5067824999999999" name="Zr90"/>
     <nuclide ao="0.11051699999999999" name="Zr91"/>
@@ -33,14 +33,15 @@
   <material id="4" name="Graphite" volume="37498.85131523688">
     <density units="g/cm3" value="1.85"/>
     <nuclide ao="1.0" name="C0"/>
+    <sab name="c_Graphite"/>
   </material>
-  <material id="5" name="Boron Carbide" volume="30830.702802405583">
+  <material id="5" name="Boron Carbide" volume="1304990.431529999">
     <density units="g/cm3" value="2.5"/>
     <nuclide ao="0.7928" name="B10"/>
     <nuclide ao="3.2072" name="B11"/>
     <nuclide ao="1.0" name="C0"/>
   </material>
-  <material id="6" name="Stainless Steel" volume="5018.256954412316">
+  <material id="6" name="Stainless Steel" volume="832983.9188434925">
     <density units="g/cm3" value="8.05"/>
     <nuclide ao="0.05076967" name="Fe54"/>
     <nuclide ao="0.7969752440000001" name="Fe56"/>
@@ -52,14 +53,14 @@
     <nuclide ao="0.0104511" name="Cr53"/>
     <nuclide ao="0.0026015" name="Cr54"/>
   </material>
-  <material id="8" name="Water" temperature="600.0">
+  <material id="8" name="Water" temperature="902">
     <density units="g/cm3" value="1"/>
     <nuclide ao="1.99968852" name="H1"/>
     <nuclide ao="0.00031148" name="H2"/>
     <nuclide ao="0.999621" name="O16"/>
     <nuclide ao="0.000379" name="O17"/>
   </material>
-  <material id="9" name="B(OH)3" temperature="600.0">
+  <material id="9" name="B(OH)3" temperature="902">
     <density units="g/cm3" value="1.435"/>
     <nuclide ao="0.2" name="B10"/>
     <nuclide ao="0.8" name="B11"/>
@@ -68,7 +69,7 @@
     <nuclide ao="2.99953278" name="H1"/>
     <nuclide ao="0.00046721999999999996" name="H2"/>
   </material>
-  <material id="10" name="Water(0.99)-B(OH)3(0.01)" volume="209333.00438405658">
+  <material id="10" name="Water(0.99)-B(OH)3(0.01)" volume="39335827.24751624">
     <density units="g/cm3" value="1.003040575961975"/>
     <nuclide ao="0.6649392788686085" name="H1"/>
     <nuclide ao="0.00010357377387053966" name="H2"/>
@@ -76,6 +77,7 @@
     <nuclide ao="0.00012657950353940018" name="O17"/>
     <nuclide ao="0.0001948576829025235" name="B10"/>
     <nuclide ao="0.000779430731610094" name="B11"/>
+    <sab name="c_H_in_H2O"/>
   </material>
   <material id="11" name="air">
     <density units="g/cm3" value="0.001293"/>
@@ -84,12 +86,13 @@
     <nuclide ao="0.20992041" name="O16"/>
     <nuclide ao="7.959e-05" name="O17"/>
   </material>
-  <material depletable="true" id="12" name="Fuel UO2(0.9)-Gadolinium Oxide Gd2O3 Fuel(0.1)" volume="30830.702802405583">
+  <material depletable="true" id="12" name="Fuel UO2(0.9)-Gadolinium Oxide Gd2O3 Fuel(0.1)" volume="1093263.1222112542">
     <density units="g/cm3" value="7.929161315087416"/>
     <nuclide ao="0.012306371136137308" name="U235"/>
     <nuclide ao="0.24407636086672327" name="U238"/>
     <nuclide ao="0.7139478591175974" name="O16"/>
     <nuclide ao="0.0002706888296720151" name="O17"/>
     <nuclide ao="0.02939872004986994" name="Gd152"/>
+    <sab name="c_U_in_UO2"/>
   </material>
 </materials>

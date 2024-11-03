@@ -7,6 +7,7 @@ import openmc.deplete # type: ignore
 import openmc.model # type: ignore
 import matplotlib.pyplot as plt
 import numpy as np
+import csv
 
 ##############################################################################################################################################################################################################################################################################################################################################################################################
 # MATERIALS
@@ -18,22 +19,23 @@ urox.add_nuclide("U235", uranium_enrichment)                                    
 urox.add_nuclide("U238", 1 - uranium_enrichment)
 urox.add_element("O", 2)                                                                                                                                                    # Ignore natural distribution of oxigen isotopes (simplification))
 urox.set_density("g/cm3", 10.98)
-urox.temperature = 1172.0
+urox.temperature = 1474
 
 helium = openmc.Material(name = "Helium")                                                                                                                                   # Defining Helium material
 helium.add_element("He", 1)
 helium.set_density("g/cm3", 0.00000178)
-helium.temperature = 691.0
+helium.temperature = 691
 
 zircaloy4 = openmc.Material(name = "Zircaloy")                                                                                                                              # Defining Zircaloy material (simplified)
 zircaloy4.add_element("Zr", 0.985)
 zircaloy4.add_element("Sn", 0.015)
 zircaloy4.set_density("g/cm3", 6.56)
-zircaloy4.temperature = 691.0
+zircaloy4.temperature = 691
 
 graphite = openmc.Material(name = "Graphite")
 graphite.add_element("C", 1)
 graphite.set_density("g/cm3", 1.85)
+graphite.add_s_alpha_beta("c_Graphite")
 
 borcar = openmc.Material(name= "Boron Carbide")
 borcar.add_element("B", 4)
@@ -56,13 +58,13 @@ gadolinia.add_nuclide("Gd152", 0.2484*2)
 gadolinia.add_nuclide("Gd152", 0.2189*2)
 gadolinia.add_element("O", 3)  
 gadolinia.set_density("g/cm3", 7.07)
-gadolinia.temperature = 1172.0
+gadolinia.temperature = 1474
 
 light_water = openmc.Material(name = "Water")                                                                                                                               # Defining Water material
 light_water.add_element("H", 2)
 light_water.add_element("O", 1)
 light_water.set_density("g/cm3", 1)
-light_water.temperature = 600.0
+light_water.temperature = 902
 
 B10_concentration = 0.2
 boric_acid = openmc.Material(name = "B(OH)3")
@@ -71,10 +73,11 @@ boric_acid.add_nuclide("B11", 1 - B10_concentration)
 boric_acid.add_element("O", 3)
 boric_acid.add_element("H", 3)
 boric_acid.set_density("g/cm3", 1.435)
-boric_acid.temperature = 600.0
+boric_acid.temperature = 902
 
 Boric_acid_concentration = 0.01
 borated_water = openmc.Material.mix_materials([light_water, boric_acid], [1 - Boric_acid_concentration, Boric_acid_concentration], 'wo')
+borated_water.add_s_alpha_beta("c_H_in_H2O")
 
 air = openmc.Material(name= "air")
 air.add_element("N", 0.79, "ao")
@@ -82,6 +85,14 @@ air.add_element("O", 0.21, "ao")
 air.set_density("g/cm3", 0.001293)
 
 mox = openmc.Material.mix_materials([urox, gadolinia], [0.9, 0.1], 'wo')
+mox.add_s_alpha_beta("c_U_in_UO2")
+
+# Saving material temperatures to data file
+# temperatures = [urox.temperature, gadolinia.temperature, light_water.temperature, boric_acid.temperature]
+# csvfile = open('temperatures.csv', 'a') 
+# csvwriter = csv.writer(csvfile)
+# csvwriter.writerow(temperatures)
+# csvfile.close()
 
 ##############################################################################################################################################################################################################################################################################################################################################################################################
 # GEOMETRY
@@ -159,13 +170,13 @@ water_box = box
 # MATERIALS VOLUMES
 ##############################################################################################################################################################################################################################################################################################################################################################################################
 
-urox.volume = 188*17*17*np.pi * (frd/2 - 0.05)**2
-mox.volume = 188*17*17*np.pi * (frd/2 - 0.05)**2
-helium.volume = 188*17*17*(np.pi * ((frd/2 - 0.03)**2 - (frd/2 - 0.05)**2))
-zircaloy4.volume = 188*17*17*(np.pi * ((frd/2)**2 - (frd/2 - 0.03)**2))
-borcar.volume = 188*17*17*(np.pi * (frd/2 - 0.05)**2)
-stainless_steel.volume = 188*17*17*(np.pi * ((frd/2 + 0.03)**2 - (frd/2)**2))
-borated_water.volume = 188*17*17*(np.pi*(frd + 0.255)**2 - np.pi * (frd/2)**2)
+urox.volume = (17*17-8*4-69)*(17*17-28-25)*(np.pi*(frd/2 - 0.05)**2)*366
+mox.volume = (17*17-8*4-69)*(28)*(np.pi*(frd/2 - 0.05)**2)*366
+helium.volume = (17*17-8*4)*(17*17-1)*(np.pi*((frd/2 - 0.03)**2 - (frd/2 - 0.05)**2))*366
+zircaloy4.volume = (17*17-8*4)*(17*17)*(np.pi*((frd/2)**2 - (frd/2 - 0.03)**2))*366
+borcar.volume = ((69)*(17*17)*(np.pi*(frd/2 - 0.05)**2) + (17*17-8*4-69)*(25)*(np.pi*(frd/2 - 0.05)**2))*366*0.255
+stainless_steel.volume = ((69)*(17*17)*(np.pi*((frd/2 + 0.03)**2 - (frd/2)**2)) + (17*17-8*4-69)*(25)*(np.pi*((frd/2 + 0.03)**2 - (frd/2)**2)))*366
+borated_water.volume = (17*17-8*4)*(21**2)*366 - (urox.volume - mox.volume - helium.volume - zircaloy4.volume - borcar.volume - stainless_steel.volume)
 
 ##############################################################################################################################################################################################################################################################################################################################################################################################
 # CELLS
@@ -521,7 +532,7 @@ settings.export_to_xml()
 ##############################################################################################################################################################################################################################################################################################################################################################################################
 # PLOTS AND PICTURES
 ##############################################################################################################################################################################################################################################################################################################################################################################################
-
+'''
 fuel_cell.plot(color_by = "material",
                   colors = {urox: "lime", helium: "gold", air: "white", mox: "fuchsia", borated_water: "blue",
                   zircaloy4: "lightgray", light_water : "blue", borcar : "red", stainless_steel : "gray", graphite : "midnightblue"})                                                                                        
@@ -602,7 +613,7 @@ rpv_uni.plot(basis = "yz", pixels = [5000,5000], color_by = "material",
                   zircaloy4: "lightgray", light_water : "blue", borcar : "red", stainless_steel : "gray", graphite : "midnightblue"}, origin=(0,0,0))
 plt.savefig("Pictures/RPV_Universe_plot_yz")
 
-
+'''
 ##############################################################################################################################################################################################################################################################################################################################################################################################
 # TALLY ARITHMETICS 
 ##############################################################################################################################################################################################################################################################################################################################################################################################
@@ -610,14 +621,27 @@ plt.savefig("Pictures/RPV_Universe_plot_yz")
 # Defining Tallies File
 tallies_file = openmc.Tallies()                                                                                                                                             # For our tallies to be included we have to put them into an inp
 
-# Defining a Spatial Mesh
-mesh = openmc.RegularMesh()                                                                                                                                                 # Making a mesh instance
-mesh.dimension = [100,100]                                                                                                                                                  # Setting the bins of the mesh to 100 x 100 bins
-mesh.lower_left = [-(pinx*assembly_x*core_x+100)/2,-(piny*assembly_y*core_y+100)/2]                                                                                                 # Setting lower left coordinates
-mesh.upper_right = [(pinx*assembly_x*core_x+100)/2,(piny*assembly_y*core_y+100)/2]                                                                                                  # Setting upper right coordinates
-mesh_filter = openmc.MeshFilter(mesh)                                                                                                                                       # Making a meshfilter
+# Defining a Spatial Mesh for Fuel Pin Cell
+pin_mesh = openmc.RegularMesh()                                                                                                                                                 # Making a mesh instance
+pin_mesh.dimension = [100,100]                                                                                                                                                  # Setting the bins of the mesh to 100 x 100 bins
+pin_mesh.lower_left = [-18*(pinx) - pinx/2,- piny/2]                                                                                                
+pin_mesh.upper_right = [-18*(pinx) + pinx/2, piny/2]                                                                                                  
+pin_mesh_filter = openmc.MeshFilter(pin_mesh)
 
-# Spatial Distribution of the Prompt Fission Sites and the Spatial Neutron Flux Distribution
+# Spatial Distribution of the Prompt Fission Sites and the Spatial Neutron Flux Distribution for Fuel Pin Cell
+pin_tally = openmc.Tally(name = "Pin Tally")                                                                                                                                        # Making a tally instance
+pin_tally.filters = [pin_mesh_filter]                                                                                                                                               # Designatingen the mesh for the tally
+pin_tally.scores = ["flux", 'prompt-nu-fission']                                                                                                                                # Designating the objects to be tallied
+tallies_file.append(pin_tally)  
+
+# Defining a Spatial Mesh for Reactor Pressure Vessel
+rpv_mesh = openmc.RegularMesh()                                                                                                                                                 # Making a mesh instance
+rpv_mesh.dimension = [100,100]                                                                                                                                                  # Setting the bins of the mesh to 100 x 100 bins
+rpv_mesh.lower_left = [-(pinx*assembly_x*core_x+100)/2,-(piny*assembly_y*core_y+100)/2]                                                                                                 # Setting lower left coordinates
+rpv_mesh.upper_right = [(pinx*assembly_x*core_x+100)/2,(piny*assembly_y*core_y+100)/2]                                                                                                  # Setting upper right coordinates
+mesh_filter = openmc.MeshFilter(rpv_mesh)                                                                                                                                       # Making a meshfilter
+
+# Spatial Distribution of the Prompt Fission Sites and the Spatial Neutron Flux Distribution for Reactor Pressure Vessel
 tally = openmc.Tally(name = "Tally")                                                                                                                                        # Making a tally instance
 tally.filters = [mesh_filter]                                                                                                                                               # Designatingen the mesh for the tally
 tally.scores = ["flux", 'prompt-nu-fission']                                                                                                                                # Designating the objects to be tallied
@@ -629,23 +653,16 @@ energy = openmc.Tally(name = "Energy")                                          
 energy.filters = [energy_filter]                                                                                                                                            # Designating the energy filter
 energy.scores = ["flux"]
 tallies_file.append(energy)
-'''
-# Instantiate thermal, fast, and total leakage tallies
-leak = openmc.Tally(name='leakage')
-leak.filters = [mesh_filter]
-leak.scores = ['current']
-tallies_file.append(leak)
 
-thermal_leak = openmc.Tally(name='thermal leakage')
-thermal_leak.filters = [mesh_filter, openmc.EnergyFilter([0., 0.625])]
-thermal_leak.scores = ['current']
-tallies_file.append(thermal_leak)
+# Five-Factor Formula Coefficients
+# --------------------------------
 
-fast_leak = openmc.Tally(name='fast leakage')
-fast_leak.filters = [mesh_filter, openmc.EnergyFilter([0.625, 20.0e6])]
-fast_leak.scores = ['current']
-tallies_file.append(fast_leak)
-'''
+# Fast Fission Factor tallies
+therm_fiss_rate = openmc.Tally(name='therm. fiss. rate')
+therm_fiss_rate.scores = ['nu-fission']
+therm_fiss_rate.filters = [openmc.EnergyFilter([0., 0.625])]
+tallies_file.append(therm_fiss_rate)
+
 # Resonance Escape Probability tallies
 therm_abs_rate = openmc.Tally(name='therm. abs. rate')
 therm_abs_rate.scores = ['absorption']
@@ -658,6 +675,40 @@ fuel_therm_abs_rate.scores = ['absorption']
 fuel_therm_abs_rate.filters = [openmc.EnergyFilter([0., 0.625]), openmc.CellFilter([fuel_cell])]
 tallies_file.append(fuel_therm_abs_rate)
 
+# Instantiate a tally mesh
+mesh = openmc.RegularMesh(mesh_id=1)
+mesh.dimension = [1, 1, 1]
+mesh.lower_left = [-(pinx*assembly_x*core_x+100)/2,-(piny*assembly_y*core_y+100)/2, -366/2]
+mesh.upper_right= [(pinx*assembly_x*core_x+100)/2,(piny*assembly_y*core_y+100)/2, 366/2]
+#mesh.width = [1.26, 1.26, 200.]
+meshsurface_filter = openmc.MeshSurfaceFilter(mesh)
+
+# Instantiate thermal, fast, and total leakage tallies
+leak = openmc.Tally(name='leakage')
+leak.filters = [meshsurface_filter]
+leak.scores = ['current']
+tallies_file.append(leak)
+
+thermal_leak = openmc.Tally(name='thermal leakage')
+thermal_leak.filters = [meshsurface_filter, openmc.EnergyFilter([0., 0.625])]
+thermal_leak.scores = ['current']
+tallies_file.append(thermal_leak)
+
+fast_leak = openmc.Tally(name='fast leakage')
+fast_leak.filters = [meshsurface_filter, openmc.EnergyFilter([0.625, 20.0e6])]
+fast_leak.scores = ['current']
+tallies_file.append(fast_leak)
+
+# K-Eigenvalue (infinity) tallies
+fiss_rate = openmc.Tally(name='fiss. rate')
+abs_rate = openmc.Tally(name='abs. rate')
+fiss_rate.scores = ['nu-fission']
+abs_rate.scores = ['absorption']
+tallies_file += (fiss_rate, abs_rate)
+
+# Beta-Delayed Neutrons vs Total Neutrons
+# ---------------------------------------
+
 # Beta-Delayed neutron fission
 delayed_nu = openmc.Tally(name="del.nu.fis.")
 delayed_nu.scores = ['delayed-nu-fission']
@@ -667,49 +718,6 @@ tallies_file.append(delayed_nu)
 total_nu = openmc.Tally(name="tot.nu.fis.")
 total_nu.scores = ['nu-fission']
 tallies_file.append(total_nu)
-
-'''
-# Instantiate flux Tally in moderator and fuel
-tally = openmc.Tally(name='flux')
-tally.filters = [openmc.CellFilter([fuel_cell, moderator_cell])]
-tally.filters.append(energy_filter)
-tally.scores = ['flux']
-tallies_file.append(tally)
-
-# Instantiate reaction rate Tally in fuel
-tally = openmc.Tally(name='fuel rxn rates')
-tally.filters = [openmc.CellFilter(fuel_cell)]
-tally.filters.append(energy_filter)
-tally.scores = ['nu-fission', 'scatter']
-tally.nuclides = ['U238', 'U235']
-tallies_file.append(tally)
-
-# Instantiate reaction rate Tally in moderator
-tally = openmc.Tally(name='moderator rxn rates')
-tally.filters = [openmc.CellFilter(moderator_cell)]
-tally.filters.append(energy_filter)
-tally.scores = ['absorption', 'total']
-tally.nuclides = ['O16', 'H1']
-tallies_file.append(tally)
-
-# Fast Fission Factor tallies
-therm_fiss_rate = openmc.Tally(name='therm. fiss. rate')
-therm_fiss_rate.scores = ['nu-fission']
-therm_fiss_rate.filters = [openmc.EnergyFilter([0., 0.625])]
-tallies_file.append(therm_fiss_rate)
-
-# Instantiate energy filter to illustrate Tally slicing
-fine_energy_filter = openmc.EnergyFilter(np.logspace(np.log10(1e-2), np.log10(20.0e6), 10))
-
-# Instantiate flux Tally in moderator and fuel
-tally = openmc.Tally(name='need-to-slice')
-tally.filters = [openmc.CellFilter([fuel_cell, moderator_cell])]
-tally.filters.append(fine_energy_filter)
-tally.scores = ['nu-fission', 'scatter']
-tally.nuclides = ['H1', 'U238']
-tallies_file.append(tally)
-'''
-
 
 tallies_file.export_to_xml()
 
@@ -724,15 +732,15 @@ reactor_model.settings = settings
 reactor_model.tallies = tallies_file
 
 # Designating the depletion chain being used for our depletion calculation
-chain = openmc.deplete.Chain.from_xml("./chain_casl_pwr.xml")
+chain = openmc.deplete.Chain.from_xml("./chain_endfb80_pwr.xml")
 
-operator = openmc.deplete.CoupledOperator(reactor_model, "./chain_casl_pwr.xml")
+operator = openmc.deplete.CoupledOperator(reactor_model, "./chain_endfb80_pwr.xml")
 
 # Designating power settings in watts
 power = 1200*10**6 
 
-# Number of timesteps and their length: in this case 6 steps of one month length in seconds.
-time_steps = [30* 24 * 60 * 60] * 6
+# Number of timesteps and their length: in this case 56 steps of one week length in seconds, resulting in a 13 month cycle.
+time_steps = [7* 24 * 60 * 60] * 56
 
 #Running the depletion calculation
 integrator = openmc.deplete.PredictorIntegrator(operator, time_steps, power)
@@ -744,15 +752,10 @@ integrator.integrate()
 ##############################################################################################################################################################################################################################################################################################################################################################################################
 
 if __name__ == "__main__":
-    openmc.run(threads = 4)                                                                                                                                                 # Threads set for heplab primarily (to limit utilized cores on heplab server, this can be removed when run locally)
+    openmc.run()  #threads = 4                                                                                                                                               # Threads set for heplab primarily (to limit utilized cores on heplab server, this can be removed when run locally)
 
 ##############################################################################################################################################################################################################################################################################################################################################################################################
 # END
 ##############################################################################################################################################################################################################################################################################################################################################################################################
 
-# TO DO LIST: 
-# Make fuel rotation
-# Adjust tallies and filters
-# Export data to external file for k-eff and temperature of reactor fuel
-# Make a plot showing relation between k and T
-# Write report
+exec(open("Post_processing.py").read())
