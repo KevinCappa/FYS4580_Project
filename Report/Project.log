@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  3 NOV 2024 22:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  5 NOV 2024 23:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -204,51 +204,153 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip52
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen154
+\ar@mcellbox=\box52
+\extrarowheight=\dimen155
+\NC@list=\toks23
+\extratabsurround=\skip53
+\backup@length=\skip54
+\ar@cellbox=\box53
+) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip55
+\multirow@cntb=\count281
+\multirow@dima=\skip56
+\bigstrutjot=\dimen156
+) (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count281
-\l__pdf_internal_box=\box52
+\l__color_backend_stack_int=\count282
+\l__pdf_internal_box=\box54
+))
+Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count283
+\l__lipsum_a_int=\count284
+\l__lipsum_b_int=\count285
+ (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
+\c@tracingmulticols=\count286
+
+
+Package multicol Warning: May not work with the twocolumn option on input line 142.
+
+\mult@box=\box55
+\multicol@leftmargin=\dimen157
+\c@unbalance=\count287
+\c@collectmore=\count288
+\doublecol@number=\count289
+\multicoltolerance=\count290
+\multicolpretolerance=\count291
+\full@width=\dimen158
+\page@free=\dimen159
+\premulticols=\dimen160
+\postmulticols=\dimen161
+\multicolsep=\skip57
+\multicolbaselineskip=\skip58
+\partial@page=\box56
+\last@line=\box57
+\maxbalancingoverflow=\dimen162
+\mult@rightbox=\box58
+\mult@grightbox=\box59
+\mult@firstbox=\box60
+\mult@gfirstbox=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\c@minrows=\count292
+\c@columnbadness=\count293
+\c@finalcolumnbadness=\count294
+\last@try=\dimen163
+\multicolovershoot=\dimen164
+\multicolundershoot=\dimen165
+\mult@nat@firstbox=\box98
+\colbreak@box=\box99
+\mc@col@check@num=\count295
+) (/usr/share/texlive/texmf-dist/tex/latex/dirtytalk/dirtytalk.sty
+Package: dirtytalk 2010/11/21 A package making "quoting" easier
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@dirtytalk@qdepth=\count296
 ) (./Project.aux)
 \openout1 = `Project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count282
-\scratchdimen=\dimen154
-\scratchbox=\box53
-\nofMPsegments=\count283
-\nofMParguments=\count284
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count285
-\MPscratchDim=\dimen155
-\MPnumerator=\count286
-\makeMPintoPDFobject=\count287
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count297
+\scratchdimen=\dimen166
+\scratchbox=\box100
+\nofMPsegments=\count298
+\nofMParguments=\count299
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count300
+\MPscratchDim=\dimen167
+\MPnumerator=\count301
+\makeMPintoPDFobject=\count302
+\everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 33.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -256,116 +358,295 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count288
+\c@section@level=\count303
 )
-LaTeX Info: Redefining \ref on input line 30.
-LaTeX Info: Redefining \pageref on input line 30.
-LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Info: Redefining \ref on input line 33.
+LaTeX Info: Redefining \pageref on input line 33.
+LaTeX Info: Redefining \nameref on input line 33.
  (./Project.out) (./Project.out)
 \@outlinefile=\write3
 \openout3 = `Project.out'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-<../Pictures/Fuelrods_plot_xy.png, id=62, 745.8264pt x 750.1626pt>
+<../Pictures/Fuelrods_plot_xy.png, id=66, 5594.4207pt x 5631.2784pt>
 File: ../Pictures/Fuelrods_plot_xy.png Graphic file (type png)
 <use ../Pictures/Fuelrods_plot_xy.png>
-Package pdftex.def Info: ../Pictures/Fuelrods_plot_xy.png  used on input line 73.
-(pdftex.def)             Requested size: 192.17816pt x 193.29779pt.
-<../Pictures/Fuelrods_plot_yz.png, id=64, 745.8264pt x 750.1626pt>
+Package pdftex.def Info: ../Pictures/Fuelrods_plot_xy.png  used on input line 78.
+(pdftex.def)             Requested size: 192.17816pt x 193.42004pt.
+<../Pictures/Fuelrods_plot_yz.png, id=68, 5594.4207pt x 5631.2784pt>
 File: ../Pictures/Fuelrods_plot_yz.png Graphic file (type png)
 <use ../Pictures/Fuelrods_plot_yz.png>
-Package pdftex.def Info: ../Pictures/Fuelrods_plot_yz.png  used on input line 80.
-(pdftex.def)             Requested size: 192.17816pt x 193.29779pt.
-<../Pictures/Burnablefuelrods_plot_xy.png, id=65, 745.8264pt x 750.1626pt>
-File: ../Pictures/Burnablefuelrods_plot_xy.png Graphic file (type png)
-<use ../Pictures/Burnablefuelrods_plot_xy.png>
-Package pdftex.def Info: ../Pictures/Burnablefuelrods_plot_xy.png  used on input line 87.
-(pdftex.def)             Requested size: 192.17816pt x 193.29779pt.
-<../Pictures/Burnablefuelrods_plot_yz.png, id=66, 745.8264pt x 750.1626pt>
-File: ../Pictures/Burnablefuelrods_plot_yz.png Graphic file (type png)
-<use ../Pictures/Burnablefuelrods_plot_yz.png>
-Package pdftex.def Info: ../Pictures/Burnablefuelrods_plot_yz.png  used on input line 94.
-(pdftex.def)             Requested size: 192.17816pt x 193.29779pt.
-<../Pictures/Controlrods_plot_xy.png, id=67, 745.8264pt x 750.1626pt>
-File: ../Pictures/Controlrods_plot_xy.png Graphic file (type png)
-<use ../Pictures/Controlrods_plot_xy.png>
-Package pdftex.def Info: ../Pictures/Controlrods_plot_xy.png  used on input line 101.
-(pdftex.def)             Requested size: 192.17816pt x 193.29779pt.
-<../Pictures/Controlrods_plot_yz.png, id=68, 745.8264pt x 750.1626pt>
-File: ../Pictures/Controlrods_plot_yz.png Graphic file (type png)
-<use ../Pictures/Controlrods_plot_yz.png>
-Package pdftex.def Info: ../Pictures/Controlrods_plot_yz.png  used on input line 108.
-(pdftex.def)             Requested size: 192.17816pt x 193.29779pt.
+Package pdftex.def Info: ../Pictures/Fuelrods_plot_yz.png  used on input line 86.
+(pdftex.def)             Requested size: 192.17816pt x 193.42004pt.
 
-Underfull \vbox (badness 2626) has occurred while \output is active []
+Overfull \hbox (0.78923pt too wide) in paragraph at lines 127--128
+[]|\OT1/cmr/m/n/10 0.001293|  
+ []
 
- [2 <../Pictures/Fuelrods_plot_xy.png> <../Pictures/Fuelrods_plot_yz.png> <../Pictures/Burnablefuelrods_plot_xy.png> <../Pictures/Burnablefuelrods_plot_yz.png>]
+
+Underfull \vbox (badness 5359) has occurred while \output is active []
+
+ [2 <../Pictures/Fuelrods_plot_xy.png> <../Pictures/Fuelrods_plot_yz.png>]
+<../Pictures/f_Assembly_Universe_plot_xy.png, id=97, 5594.4207pt x 5631.2784pt>
+File: ../Pictures/f_Assembly_Universe_plot_xy.png Graphic file (type png)
+<use ../Pictures/f_Assembly_Universe_plot_xy.png>
+Package pdftex.def Info: ../Pictures/f_Assembly_Universe_plot_xy.png  used on input line 140.
+(pdftex.def)             Requested size: 192.17816pt x 193.42004pt.
+<../Pictures/f_Assembly_Universe_plot_yz.png, id=98, 5594.4207pt x 5631.2784pt>
+File: ../Pictures/f_Assembly_Universe_plot_yz.png Graphic file (type png)
+<use ../Pictures/f_Assembly_Universe_plot_yz.png>
+Package pdftex.def Info: ../Pictures/f_Assembly_Universe_plot_yz.png  used on input line 148.
+(pdftex.def)             Requested size: 192.17816pt x 193.42004pt.
+<../Pictures/RPV_Universe_plot_xy.png, id=101, 5594.4207pt x 5631.2784pt>
+File: ../Pictures/RPV_Universe_plot_xy.png Graphic file (type png)
+<use ../Pictures/RPV_Universe_plot_xy.png>
+Package pdftex.def Info: ../Pictures/RPV_Universe_plot_xy.png  used on input line 159.
+(pdftex.def)             Requested size: 192.17816pt x 193.42004pt.
+<../Pictures/RPV_Universe_plot_yz.png, id=102, 5594.4207pt x 5631.2784pt>
+File: ../Pictures/RPV_Universe_plot_yz.png Graphic file (type png)
+<use ../Pictures/RPV_Universe_plot_yz.png>
+Package pdftex.def Info: ../Pictures/RPV_Universe_plot_yz.png  used on input line 167.
+(pdftex.def)             Requested size: 192.17816pt x 193.42004pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+
+ []
+
+[3 <../Pictures/f_Assembly_Universe_plot_xy.png> <../Pictures/f_Assembly_Universe_plot_yz.png> <../Pictures/RPV_Universe_plot_xy.png> <../Pictures/RPV_Universe_plot_yz.png>]
+Underfull \hbox (badness 1424) in paragraph at lines 180--181
+\OT1/cmr/m/n/10 value of the neu-tron mul-ti-pli-ca-tion num-ber, i.e.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+
+ []
+
+<../Pin_Cell/Mesh_Fuel_Pin_Cell_Vacuum.png, id=118, 1156.32pt x 867.24pt>
+File: ../Pin_Cell/Mesh_Fuel_Pin_Cell_Vacuum.png Graphic file (type png)
+<use ../Pin_Cell/Mesh_Fuel_Pin_Cell_Vacuum.png>
+Package pdftex.def Info: ../Pin_Cell/Mesh_Fuel_Pin_Cell_Vacuum.png  used on input line 211.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+<../Pin_Cell/Mesh_Fuel_Pin_Cell_Reflective.png, id=119, 1156.32pt x 867.24pt>
+File: ../Pin_Cell/Mesh_Fuel_Pin_Cell_Reflective.png Graphic file (type png)
+<use ../Pin_Cell/Mesh_Fuel_Pin_Cell_Reflective.png>
+Package pdftex.def Info: ../Pin_Cell/Mesh_Fuel_Pin_Cell_Reflective.png  used on input line 219.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
+
+ []
+
+<../Pin_Cell/Energy_Vacuum.png, id=122, 462.528pt x 346.896pt>
+File: ../Pin_Cell/Energy_Vacuum.png Graphic file (type png)
+<use ../Pin_Cell/Energy_Vacuum.png>
+Package pdftex.def Info: ../Pin_Cell/Energy_Vacuum.png  used on input line 232.
+(pdftex.def)             Requested size: 192.17816pt x 144.13382pt.
+<../Pin_Cell/Energy_Reflective.png, id=123, 462.528pt x 346.896pt>
+File: ../Pin_Cell/Energy_Reflective.png Graphic file (type png)
+<use ../Pin_Cell/Energy_Reflective.png>
+Package pdftex.def Info: ../Pin_Cell/Energy_Reflective.png  used on input line 240.
+(pdftex.def)             Requested size: 192.17816pt x 144.13382pt.
+[4 <../Pin_Cell/Mesh_Fuel_Pin_Cell_Vacuum.png> <../Pin_Cell/Mesh_Fuel_Pin_Cell_Reflective.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--275
+
+ []
+
+<../Pin_Cell/Light_Water_kandf.png, id=141, 1156.32pt x 867.24pt>
+File: ../Pin_Cell/Light_Water_kandf.png Graphic file (type png)
+<use ../Pin_Cell/Light_Water_kandf.png>
+Package pdftex.def Info: ../Pin_Cell/Light_Water_kandf.png  used on input line 281.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+[5 <../Pin_Cell/Energy_Vacuum.png> <../Pin_Cell/Energy_Reflective.png> <../Pin_Cell/Light_Water_kandf.png>]
+<../Pictures/Mesh_RPV.png, id=156, 1156.32pt x 867.24pt>
+File: ../Pictures/Mesh_RPV.png Graphic file (type png)
+<use ../Pictures/Mesh_RPV.png>
+Package pdftex.def Info: ../Pictures/Mesh_RPV.png  used on input line 297.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+<../Pictures/Energy.png, id=158, 462.528pt x 346.896pt>
+File: ../Pictures/Energy.png Graphic file (type png)
+<use ../Pictures/Energy.png>
+Package pdftex.def Info: ../Pictures/Energy.png  used on input line 308.
+(pdftex.def)             Requested size: 192.17816pt x 144.13382pt.
+<../Pictures/Doppler.png, id=160, 1156.32pt x 867.24pt>
+File: ../Pictures/Doppler.png Graphic file (type png)
+<use ../Pictures/Doppler.png>
+Package pdftex.def Info: ../Pictures/Doppler.png  used on input line 319.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+<../Pictures/Depletion_keff.png, id=162, 1156.32pt x 867.24pt>
+File: ../Pictures/Depletion_keff.png Graphic file (type png)
+<use ../Pictures/Depletion_keff.png>
+Package pdftex.def Info: ../Pictures/Depletion_keff.png  used on input line 332.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+ [6 <../Pictures/Mesh_RPV.png> <../Pictures/Energy.png> <../Pictures/Doppler.png>]
+<../Pictures/Depletion_FissionU235.png, id=178, 1156.32pt x 867.24pt>
+File: ../Pictures/Depletion_FissionU235.png Graphic file (type png)
+<use ../Pictures/Depletion_FissionU235.png>
+Package pdftex.def Info: ../Pictures/Depletion_FissionU235.png  used on input line 343.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+<../Pictures/Depletion_U235_P239.png, id=179, 1156.32pt x 867.24pt>
+File: ../Pictures/Depletion_U235_P239.png Graphic file (type png)
+<use ../Pictures/Depletion_U235_P239.png>
+Package pdftex.def Info: ../Pictures/Depletion_U235_P239.png  used on input line 351.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+<../Pictures/Depletion_Xe135_Sm149.png, id=180, 1156.32pt x 867.24pt>
+File: ../Pictures/Depletion_Xe135_Sm149.png Graphic file (type png)
+<use ../Pictures/Depletion_Xe135_Sm149.png>
+Package pdftex.def Info: ../Pictures/Depletion_Xe135_Sm149.png  used on input line 362.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+ [7 <../Pictures/Depletion_keff.png> <../Pictures/Depletion_FissionU235.png> <../Pictures/Depletion_U235_P239.png> <../Pictures/Depletion_Xe135_Sm149.png>]
 No file Project.bbl.
 
-Underfull \hbox (badness 1616) in paragraph at lines 153--156
+Underfull \hbox (badness 1616) in paragraph at lines 401--404
 \OT1/cmr/m/n/9 ad-vanced nu-clear power plants, (p. 1675). Japan:
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 153--156
+Underfull \hbox (badness 2376) in paragraph at lines 401--404
 \OT1/cmr/m/n/9 Kyoto, JAPAN. IAEA INIS) []$\OT1/cmtt/m/n/9 https : / / inis . iaea .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
+Underfull \hbox (badness 10000) in paragraph at lines 401--404
 \OT1/cmtt/m/n/9 org / search / searchsinglerecord . aspx ? recordsFor =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--160
+Underfull \hbox (badness 10000) in paragraph at lines 406--408
 []$\OT1/cmtt/m/n/9 https : / / docs . openmc . org / en / v0 . 11 . 0 / examples /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--164
+Underfull \hbox (badness 10000) in paragraph at lines 410--412
 []$\OT1/cmtt/m/n/9 https : / / docs . openmc . org / en / v0 . 12 . 2 / examples /
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 166--168
+Underfull \hbox (badness 2600) in paragraph at lines 414--416
 []\OT1/cmr/m/n/9 K. Hes-keth, \OT1/cmr/m/it/9 Ma-te-rial Prop-er-ties/Oxide Fu-els for
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 166--168
+Underfull \hbox (badness 1675) in paragraph at lines 414--416
 \OT1/cmr/m/it/9 Light Wa-ter Re-ac-tors and Fast Neu-tron Re-ac-tors\OT1/cmr/m/n/9 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--168
+Underfull \hbox (badness 10000) in paragraph at lines 414--416
 []$\OT1/cmtt/m/n/9 https : / / www . sciencedirect . com / topics /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--172
+Underfull \hbox (badness 10000) in paragraph at lines 418--420
 []$\OT1/cmtt/m/n/9 https : / / github . com / KevinCappa / FYS4580 _ Project .
  []
 
-[3 <../Pictures/Controlrods_plot_xy.png> <../Pictures/Controlrods_plot_yz.png>] (./Project.aux)
+[8]
+<../Pictures/Burnablefuelrods_plot_xy.png, id=216, 5594.4207pt x 5631.2784pt>
+File: ../Pictures/Burnablefuelrods_plot_xy.png Graphic file (type png)
+<use ../Pictures/Burnablefuelrods_plot_xy.png>
+Package pdftex.def Info: ../Pictures/Burnablefuelrods_plot_xy.png  used on input line 438.
+(pdftex.def)             Requested size: 144.13728pt x 145.04355pt.
+<../Pictures/Burnablefuelrods_plot_yz.png, id=217, 5594.4207pt x 5631.2784pt>
+File: ../Pictures/Burnablefuelrods_plot_yz.png Graphic file (type png)
+<use ../Pictures/Burnablefuelrods_plot_yz.png>
+Package pdftex.def Info: ../Pictures/Burnablefuelrods_plot_yz.png  used on input line 445.
+(pdftex.def)             Requested size: 144.13728pt x 145.04355pt.
+<../Pictures/Controlrods_plot_xy.png, id=218, 5594.4207pt x 5631.2784pt>
+File: ../Pictures/Controlrods_plot_xy.png Graphic file (type png)
+<use ../Pictures/Controlrods_plot_xy.png>
+Package pdftex.def Info: ../Pictures/Controlrods_plot_xy.png  used on input line 452.
+(pdftex.def)             Requested size: 144.13728pt x 145.04355pt.
+<../Pictures/Controlrods_plot_yz.png, id=219, 5594.4207pt x 5631.2784pt>
+File: ../Pictures/Controlrods_plot_yz.png Graphic file (type png)
+<use ../Pictures/Controlrods_plot_yz.png>
+Package pdftex.def Info: ../Pictures/Controlrods_plot_yz.png  used on input line 459.
+(pdftex.def)             Requested size: 144.13728pt x 145.04355pt.
+<../Pictures/Thimbleguides_plot_xy.png, id=220, 5594.4207pt x 5631.2784pt>
+File: ../Pictures/Thimbleguides_plot_xy.png Graphic file (type png)
+<use ../Pictures/Thimbleguides_plot_xy.png>
+Package pdftex.def Info: ../Pictures/Thimbleguides_plot_xy.png  used on input line 466.
+(pdftex.def)             Requested size: 144.13728pt x 145.04355pt.
+<../Pictures/Thimbleguides_plot_yz.png, id=221, 5594.4207pt x 5631.2784pt>
+File: ../Pictures/Thimbleguides_plot_yz.png Graphic file (type png)
+<use ../Pictures/Thimbleguides_plot_yz.png>
+Package pdftex.def Info: ../Pictures/Thimbleguides_plot_yz.png  used on input line 473.
+(pdftex.def)             Requested size: 144.13728pt x 145.04355pt.
+<../Pin_Cell/Light_Water.png, id=222, 1156.32pt x 867.24pt>
+File: ../Pin_Cell/Light_Water.png Graphic file (type png)
+<use ../Pin_Cell/Light_Water.png>
+Package pdftex.def Info: ../Pin_Cell/Light_Water.png  used on input line 480.
+(pdftex.def)             Requested size: 168.16139pt x 126.11049pt.
+<../Pin_Cell/Heavy_Water.png, id=223, 1156.32pt x 867.24pt>
+File: ../Pin_Cell/Heavy_Water.png Graphic file (type png)
+<use ../Pin_Cell/Heavy_Water.png>
+Package pdftex.def Info: ../Pin_Cell/Heavy_Water.png  used on input line 487.
+(pdftex.def)             Requested size: 168.16139pt x 126.11049pt.
+<../Pin_Cell/Graphite.png, id=224, 1156.32pt x 867.24pt>
+File: ../Pin_Cell/Graphite.png Graphic file (type png)
+<use ../Pin_Cell/Graphite.png>
+Package pdftex.def Info: ../Pin_Cell/Graphite.png  used on input line 494.
+(pdftex.def)             Requested size: 168.16139pt x 126.11049pt.
+<../Pictures/Mesh_Fuel_Pin_Cell.png, id=225, 1156.32pt x 867.24pt>
+File: ../Pictures/Mesh_Fuel_Pin_Cell.png Graphic file (type png)
+<use ../Pictures/Mesh_Fuel_Pin_Cell.png>
+Package pdftex.def Info: ../Pictures/Mesh_Fuel_Pin_Cell.png  used on input line 501.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+<../Pictures/Mesh_Burnable_Fuel_Pin_Cell.png, id=226, 1156.32pt x 867.24pt>
+File: ../Pictures/Mesh_Burnable_Fuel_Pin_Cell.png Graphic file (type png)
+<use ../Pictures/Mesh_Burnable_Fuel_Pin_Cell.png>
+Package pdftex.def Info: ../Pictures/Mesh_Burnable_Fuel_Pin_Cell.png  used on input line 508.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+<../Pictures/Mesh_Control_Pin_Cell.png, id=227, 1156.32pt x 867.24pt>
+File: ../Pictures/Mesh_Control_Pin_Cell.png Graphic file (type png)
+<use ../Pictures/Mesh_Control_Pin_Cell.png>
+Package pdftex.def Info: ../Pictures/Mesh_Control_Pin_Cell.png  used on input line 515.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+<../Pictures/Doppler_Five.png, id=228, 1156.32pt x 867.24pt>
+File: ../Pictures/Doppler_Five.png Graphic file (type png)
+<use ../Pictures/Doppler_Five.png>
+Package pdftex.def Info: ../Pictures/Doppler_Five.png  used on input line 522.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+<../Pictures/Depletion_U238_Pu241.png, id=229, 1156.32pt x 867.24pt>
+File: ../Pictures/Depletion_U238_Pu241.png Graphic file (type png)
+<use ../Pictures/Depletion_U238_Pu241.png>
+Package pdftex.def Info: ../Pictures/Depletion_U238_Pu241.png  used on input line 529.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+<../Pictures/Depletion_Fission.png, id=230, 1156.32pt x 867.24pt>
+File: ../Pictures/Depletion_Fission.png Graphic file (type png)
+<use ../Pictures/Depletion_Fission.png>
+Package pdftex.def Info: ../Pictures/Depletion_Fission.png  used on input line 536.
+(pdftex.def)             Requested size: 192.17816pt x 144.13383pt.
+ [9
+
+ <../Pictures/Burnablefuelrods_plot_xy.png> <../Pictures/Burnablefuelrods_plot_yz.png> <../Pictures/Controlrods_plot_xy.png> <../Pictures/Controlrods_plot_yz.png> <../Pictures/Thimbleguides_plot_xy.png>] [10 <../Pictures/Thimbleguides_plot_yz.png> <../Pin_Cell/Light_Water.png> <../Pin_Cell/Heavy_Water.png> <../Pin_Cell/Graphite.png> <../Pictures/Mesh_Fuel_Pin_Cell.png> <../Pictures/Mesh_Burnable_Fuel_Pin_Cell.png>] [11 <../Pictures/Mesh_Control_Pin_Cell.png> <../Pictures/Doppler_Five.png> <../Pictures/Depletion_U238_Pu241.png> <../Pictures/Depletion_Fission.png>] (./Project.aux)
 Package rerunfilecheck Info: File `Project.out' has not changed.
-(rerunfilecheck)             Checksum: 6B1F801BC37F5195233AFE3E0590B789;1066.
+(rerunfilecheck)             Checksum: B1327F3375CE023CB569944F2844E923;1231.
  ) 
 Here is how much of TeX's memory you used:
- 8958 strings out of 478287
- 140997 string characters out of 5849289
- 444566 words of memory out of 5000000
- 27018 multiletter control sequences out of 15000+600000
+ 10044 strings out of 478287
+ 166422 string characters out of 5849289
+ 553083 words of memory out of 5000000
+ 28007 multiletter control sequences out of 15000+600000
  476590 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,8n,63p,1906b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on Project.pdf (3 pages, 256818 bytes).
+ 68i,11n,77p,1916b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on Project.pdf (11 pages, 16724104 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 95 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 333 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 230 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,5 @@
 ##############################################################################################################################################################################################################################################################################################################################################################################################
-# FYS4580 PROJECT H24                                                                                                                                                       # COMMENTS
+# FYS4580 PROJECT - PART 2                                                                                                                                                       # COMMENTS
 ##############################################################################################################################################################################################################################################################################################################################################################################################
 
 import openmc # type: ignore
@@ -48,14 +48,14 @@ stainless_steel.add_element("C", 0.0214)
 stainless_steel.add_element("Cr", 0.1100)
 stainless_steel.set_density("g/cm3", 8.05)
 
-gadolinia = openmc.Material(name = "Gadolinium Oxide Gd2O3 Fuel")
-gadolinia.add_nuclide("Gd152", 0.02*2)
-gadolinia.add_nuclide("Gd152", 0.0218*2)
-gadolinia.add_nuclide("Gd152", 0.148*2)
-gadolinia.add_nuclide("Gd152", 0.2047*2)
-gadolinia.add_nuclide("Gd152", 0.1565*2)
-gadolinia.add_nuclide("Gd152", 0.2484*2)
-gadolinia.add_nuclide("Gd152", 0.2189*2)
+gadolinia = openmc.Material(name = "Gadolinium Oxide Gd2O3 Fuel")           # By mistake I run the whole depletion model only on Gd152 and
+gadolinia.add_nuclide("Gd152", 0.02*2)                                      # optimized k-effective for this case. I have afterwards updated
+gadolinia.add_nuclide("Gd154", 0.0218*2)                                    # the gadolinia material with the right Gd isotopes and get a 
+gadolinia.add_nuclide("Gd155", 0.148*2)                                     # k-effective a factor of ca 0.1 lower. I want to cry.
+gadolinia.add_nuclide("Gd156", 0.2047*2)
+gadolinia.add_nuclide("Gd157", 0.1565*2)
+gadolinia.add_nuclide("Gd158", 0.2484*2)
+gadolinia.add_nuclide("Gd160", 0.2189*2)
 gadolinia.add_element("O", 3)  
 gadolinia.set_density("g/cm3", 7.07)
 gadolinia.temperature = 1474
@@ -478,7 +478,7 @@ core_uni = openmc.Universe(cells = cell_list)
 # Neutron Reflector
 neutron_reflector = -openmc.ZCylinder(r = (pinx*assembly_x*(core_x+4))/2 , boundary_type = outedge)        
 neutron_reflector_cell = openmc.Cell(fill = core_uni, region = neutron_reflector & +c_outbot & -c_outcap)                                                
-graphite.volume = np.pi * ((pinx*assembly_x*(core_x+4))/2)**2 - ((core_x*core_y) - (4*8))*(pinx*assembly_x)**2
+graphite.volume = (np.pi * ((pinx*assembly_x*(core_x+4))/2)**2 - ((core_x*core_y) - (4*8))*(pinx*assembly_x)**2)*366
 
 # Tank
 r_t = 10 # Tank thickness

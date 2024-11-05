@@ -87,12 +87,18 @@
     <nuclide ao="7.959e-05" name="O17"/>
   </material>
   <material depletable="true" id="12" name="Fuel UO2(0.9)-Gadolinium Oxide Gd2O3 Fuel(0.1)" volume="1093263.1222112542">
-    <density units="g/cm3" value="7.929161315087416"/>
-    <nuclide ao="0.012306371136137308" name="U235"/>
-    <nuclide ao="0.24407636086672327" name="U238"/>
-    <nuclide ao="0.7139478591175974" name="O16"/>
-    <nuclide ao="0.0002706888296720151" name="O17"/>
-    <nuclide ao="0.02939872004986994" name="Gd152"/>
+    <density units="g/cm3" value="10.404583835946923"/>
+    <nuclide ao="0.01407470158518854" name="U235"/>
+    <nuclide ao="0.27914824810623934" name="U238"/>
+    <nuclide ao="0.6578705085345787" name="O16"/>
+    <nuclide ao="0.0002494274557403309" name="O17"/>
+    <nuclide ao="0.0009556538214328439" name="Gd152"/>
+    <nuclide ao="0.0010416626653617998" name="Gd154"/>
+    <nuclide ao="0.007071838278603045" name="Gd155"/>
+    <nuclide ao="0.009781116862365158" name="Gd156"/>
+    <nuclide ao="0.007477991152712003" name="Gd157"/>
+    <nuclide ao="0.011869220462195922" name="Gd158"/>
+    <nuclide ao="0.010459631075582478" name="Gd160"/>
     <sab name="c_U_in_UO2"/>
   </material>
 </materials>

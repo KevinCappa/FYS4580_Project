@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt # type: ignore
 import numpy as np
 import csv
 from mpl_toolkits.axes_grid1 import make_axes_locatable
-# from OpenMC_Project import temperatures
 
 #####################################################################################################################################################
 # NEUTRON DISTRIBUTION MESH FILTER
@@ -313,67 +312,77 @@ plt.savefig("Pictures/Doppler_Five")
 results = openmc.deplete.Results("./depletion_results.h5")
 time, k = results.get_keff()
 time /= (24 * 60 * 60)  # convert back to days from seconds
-plt.figure()
+plt.figure(figsize=(16, 12), dpi=500)
 plt.errorbar(time, k[:, 0], yerr=k[:, 1], capsize=3, fmt="blue", marker = 'o', ecolor = "black")
-plt.xlabel("Time [d]")
-plt.ylabel("$k_{eff}\pm \sigma$")
+plt.xlabel("Time [d]", size=25, labelpad=25)
+plt.ylabel("$k_{eff}\pm \sigma$", size=25, labelpad=25)
+plt.title('Neutron Multiplication Number', fontsize = 40, y=1.05) 
 plt.grid() 
 # plt.legend(fontsize = 10) 
 plt.savefig("Pictures/Depletion_keff",  dpi=500)
 
 _time, u235 = results.get_atoms("1", "U235")
 _time, pu239 = results.get_atoms("1", "Pu239")
-plt.figure()
+plt.figure(figsize=(16, 12), dpi=500)
 plt.plot(time, u235, marker = 'o', label="U235")
 plt.plot(time, pu239, marker = 'o', label="Pu239")
-plt.xlabel("Time [d]")
-plt.ylabel("Number of atoms - U235 and Pu239")
+plt.xlabel("Time [d]", size=25, labelpad=25)
+plt.ylabel("Number of atoms - U235 and Pu239", size=25, labelpad=25)
+plt.title('U235 and Pu239 Inventory', fontsize = 40, y=1.05) 
 plt.grid() 
-plt.legend(fontsize = 10) 
+plt.legend(fontsize = 20) 
 plt.savefig("Pictures/Depletion_U235_P239")
 
 _time, u238 = results.get_atoms("1", "U238")
 _time, pu241 = results.get_atoms("1", "Pu241")
-plt.figure()
+plt.figure(figsize=(16, 12), dpi=500)
 plt.plot(time, u238, marker = 'o', label="U238")
 plt.plot(time, pu241, marker = 'o', label="Pu241")
-plt.xlabel("Time [d]")
-plt.ylabel("Number of atoms - U238 and Pu241")
+plt.xlabel("Time [d]", size=25, labelpad=25)
+plt.ylabel("Number of atoms - U238 and Pu241", size=25, labelpad=25)
+plt.title('U238 and Pu241 Inventory', fontsize = 40, y=1.05) 
 plt.grid() 
-plt.legend(fontsize = 10) 
+plt.legend(fontsize = 20) 
 plt.savefig("Pictures/Depletion_U238_Pu241")
 
 _time, xe135 = results.get_atoms("1", "Xe135")
 _time, sm149 = results.get_atoms("1", "Sm149")
-plt.figure()
+plt.figure(figsize=(16, 12), dpi=500)
 plt.plot(time, xe135, marker = 'o', label="Xe135")
 plt.plot(time, sm149, marker = 'o', label="Sm149")
-plt.xlabel("Time [d]")
-plt.ylabel("Number of atoms - Xe135 and Sm149")
+plt.xlabel("Time [d]", size=25, labelpad=25)
+plt.ylabel("Number of atoms - Xe135 and Sm149", size=25, labelpad=25)
+plt.title('Xe135 and Sm149 Inventory', fontsize = 40, y=1.05) 
 plt.grid() 
-plt.legend(fontsize = 10) 
+plt.legend(fontsize = 20) 
 plt.savefig("Pictures/Depletion_Xe135_Sm149")
 
 _time, u235_fission = results.get_reaction_rate("1", "U235", "fission")
 _time, u238_fission = results.get_reaction_rate("1", "U238", "fission")
 _time, Pu239_fission = results.get_reaction_rate("1", "Pu239", "fission")
 _time, Pu241_fission = results.get_reaction_rate("1", "Pu241", "fission")
-plt.figure()
+plt.figure(figsize=(16, 12), dpi=500)
 plt.plot(time, u235_fission, marker = 'o', label="U235")
 plt.plot(time, u238_fission, marker = 'o', label="U238")
 plt.plot(time, Pu239_fission, marker = 'o', label="Pu239")
 plt.plot(time, Pu241_fission, marker = 'o', label="Pu241")
-plt.xlabel("Time [d]")
-plt.ylabel("Fission reactions / s")
+plt.xlabel("Time [d]", size=25, labelpad=25)
+plt.ylabel("Fission reactions / s", size=25, labelpad=25)
+plt.title('Total Fission Rates', fontsize = 40, y=1.05) 
 plt.grid() 
-plt.legend(fontsize = 10) 
+plt.legend(fontsize = 20) 
 plt.savefig("Pictures/Depletion_Fission")
+
+_time, u235_fission = results.get_reaction_rate("1", "U235", "fission")
+plt.figure(figsize=(16, 12), dpi=500)
+plt.plot(time, u235_fission, marker = 'o', label="U235")
+plt.xlabel("Time [d]", size=25, labelpad=25)
+plt.ylabel("Fission reactions / s", size=25, labelpad=25)
+plt.title('U235 Fission Rate', fontsize = 40, y=1.05) 
+plt.grid() 
+plt.legend(fontsize = 20) 
+plt.savefig("Pictures/Depletion_FissionU235")
 
 #####################################################################################################################################################
 # END
 #####################################################################################################################################################
-
-# TO DO LIST: 
-# Make better plots
-# Run Depletion again
-# Write report

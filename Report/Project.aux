@@ -19,21 +19,72 @@
 \citation{APWR}
 \citation{BurnupFuel}
 \citation{GitHub}
+\citation{BurnupFuel}
+\citation{APWR}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2}OpenMC Simulation}{1}{section.2}\protected@file@percent }
 \newlabel{sec:Simulation}{{2}{1}{OpenMC Simulation}{section.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Materials and Geometry}{1}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {I.}Materials and Geometry}{1}{subsection.2.1}\protected@file@percent }
+\newlabel{subsec:Materials and Geometry}{{I.}{1}{Materials and Geometry}{subsection.2.1}{}}
+\citation{BurnupFuel}
+\citation{BurnupFuel}
+\citation{APWR}
+\citation{BurnupFuel}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Top view of the fuel pin cell.}}{2}{figure.1}\protected@file@percent }
 \newlabel{fig:fuelpinxy}{{1}{2}{Top view of the fuel pin cell}{figure.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Side view of the fuel pin cell.}}{2}{figure.2}\protected@file@percent }
 \newlabel{fig:fuelpinyz}{{2}{2}{Side view of the fuel pin cell}{figure.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Tally Arithmetics}{2}{subsection.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Depletion}{2}{subsection.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Results}{2}{subsection.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Discussion}{2}{section.3}\protected@file@percent }
-\newlabel{sec:Discussion}{{3}{2}{Discussion}{section.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Top view of the burnable fuel pin cell.}}{2}{figure.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Side view of the burnable fuel pin cell.}}{2}{figure.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Materials used in our OpenMc simulation. Where the isotope number is not specified a natural distribution for the isotopes of the element is assumed. In the case of Gadolinia a specific distribution of the isotope has been chosen following\cite  {BurnupFuel}, this can be seen in the source code ``Materials" section.}}{2}{table.1}\protected@file@percent }
+\newlabel{table:materials}{{1}{2}{Materials used in our OpenMc simulation. Where the isotope number is not specified a natural distribution for the isotopes of the element is assumed. In the case of Gadolinia a specific distribution of the isotope has been chosen following\cite {BurnupFuel}, this can be seen in the source code ``Materials" section}{table.1}{}}
+\citation{APWR}
+\citation{APWR}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Top view of the fuel assembly.}}{3}{figure.3}\protected@file@percent }
+\newlabel{fig:fuelass_xy}{{3}{3}{Top view of the fuel assembly}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Side view of the fuel assembly.}}{3}{figure.4}\protected@file@percent }
+\newlabel{fig:fuelass_yz}{{4}{3}{Side view of the fuel assembly}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Top view of the reactor pressure vessel.}}{3}{figure.5}\protected@file@percent }
+\newlabel{fig:RPV_xy}{{5}{3}{Top view of the reactor pressure vessel}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Side view of the reactor pressure vessel.}}{3}{figure.6}\protected@file@percent }
+\newlabel{fig:RPV_yz}{{6}{3}{Side view of the reactor pressure vessel}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {II.}Pin Cell Simulation}{4}{subsection.2.2}\protected@file@percent }
+\newlabel{subsec:Pin Cell Simulation}{{II.}{4}{Pin Cell Simulation}{subsection.2.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Table showing the k-effective values simulated by OpenMC for `` and `` boundary conditions.}}{4}{table.2}\protected@file@percent }
+\newlabel{table:vacvsref}{{2}{4}{Table showing the k-effective values simulated by OpenMC for `` and `` boundary conditions}{table.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Neutron flux distribution and fission site heatmap for a pin cell with ``vacuum" transmission boundary.}}{4}{figure.7}\protected@file@percent }
+\newlabel{fig:vacuum}{{7}{4}{Neutron flux distribution and fission site heatmap for a pin cell with ``vacuum" transmission boundary}{figure.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Neutron flux distribution and fission site heatmap for a pin cell with ``reflective" transmission boundary.}}{4}{figure.8}\protected@file@percent }
+\newlabel{fig:reflective}{{8}{4}{Neutron flux distribution and fission site heatmap for a pin cell with ``reflective" transmission boundary}{figure.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Neutron energy distribution for a pin cell with ``vacuum" transmission boundary.}}{5}{figure.9}\protected@file@percent }
+\newlabel{fig:pincellenergyvac}{{9}{5}{Neutron energy distribution for a pin cell with ``vacuum" transmission boundary}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Neutron energy distribution for a pin cell with ``reflective" transmission boundary.}}{5}{figure.10}\protected@file@percent }
+\newlabel{fig:pincellenergyref}{{10}{5}{Neutron energy distribution for a pin cell with ``reflective" transmission boundary}{figure.10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Test of different moderators in our fuel pin cell and respective k-effektive values.}}{5}{table.3}\protected@file@percent }
+\newlabel{table:moderators}{{3}{5}{Test of different moderators in our fuel pin cell and respective k-effektive values}{table.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Thermal utilization factor and k-effective for a pin cell with light water moderator.}}{5}{figure.11}\protected@file@percent }
+\newlabel{fig:PCLWkeff}{{11}{5}{Thermal utilization factor and k-effective for a pin cell with light water moderator}{figure.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {III.}Reactor Core Simulation}{6}{subsection.2.3}\protected@file@percent }
+\newlabel{subsec:Reactor Core Simulation}{{III.}{6}{Reactor Core Simulation}{subsection.2.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Neutron flux distribution and fission site heatmap for the reactor pressure vessel.}}{6}{figure.12}\protected@file@percent }
+\newlabel{fig:meshRPV}{{12}{6}{Neutron flux distribution and fission site heatmap for the reactor pressure vessel}{figure.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Neutron energy distribution for the reactor pressure vessel.}}{6}{figure.13}\protected@file@percent }
+\newlabel{fig:EnergyRPV}{{13}{6}{Neutron energy distribution for the reactor pressure vessel}{figure.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Decreasing k-effective as temperature increases due to Doppler broadening.}}{6}{figure.14}\protected@file@percent }
+\newlabel{fig:doppler}{{14}{6}{Decreasing k-effective as temperature increases due to Doppler broadening}{figure.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {IV.}Depletion}{6}{subsection.2.4}\protected@file@percent }
+\newlabel{subsec:Depletion}{{IV.}{6}{Depletion}{subsection.2.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Decreasing k-effective as temperature increases due to Doppler broadening.}}{7}{figure.15}\protected@file@percent }
+\newlabel{fig:Depletionkeff}{{15}{7}{Decreasing k-effective as temperature increases due to Doppler broadening}{figure.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Decreasing k-effective as temperature increases due to Doppler broadening.}}{7}{figure.16}\protected@file@percent }
+\newlabel{fig:fissionU235}{{16}{7}{Decreasing k-effective as temperature increases due to Doppler broadening}{figure.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Decreasing k-effective as temperature increases due to Doppler broadening.}}{7}{figure.17}\protected@file@percent }
+\newlabel{fig:U235vsPu239}{{17}{7}{Decreasing k-effective as temperature increases due to Doppler broadening}{figure.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Decreasing k-effective as temperature increases due to Doppler broadening.}}{7}{figure.18}\protected@file@percent }
+\newlabel{fig:Xe135andSm149}{{18}{7}{Decreasing k-effective as temperature increases due to Doppler broadening}{figure.18}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results and Discussion}{7}{section.3}\protected@file@percent }
+\newlabel{sec:Results and Discussion}{{3}{7}{Results and Discussion}{section.3}{}}
+\citation{APWR}
+\citation{DocumentationPinCell}
+\citation{DocumentationDepletion}
 \bibdata{Project}
 \bibstyle{JHEP}
 \bibcite{APWR}{1}
@@ -41,8 +92,36 @@
 \bibcite{DocumentationDepletion}{3}
 \bibcite{BurnupFuel}{4}
 \bibcite{GitHub}{5}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Side view of the control pin cell.}}{3}{figure.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Side view of the control pin cell.}}{3}{figure.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion and Further Developments}{3}{section.4}\protected@file@percent }
-\newlabel{sec:Conclusion}{{4}{3}{Conclusion and Further Developments}{section.4}{}}
-\gdef \@abspage@last{3}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion and Further Developments}{8}{section.4}\protected@file@percent }
+\newlabel{sec:Conclusion}{{4}{8}{Conclusion and Further Developments}{section.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Top view of the burnable fuel pin cell.}}{9}{figure.19}\protected@file@percent }
+\newlabel{fig:burnfuel_xy}{{19}{9}{Top view of the burnable fuel pin cell}{figure.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Side view of the burnable fuel pin cell.}}{9}{figure.20}\protected@file@percent }
+\newlabel{fig:burnfuel_yz}{{20}{9}{Side view of the burnable fuel pin cell}{figure.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Side view of the control pin cell.}}{9}{figure.21}\protected@file@percent }
+\newlabel{fig:controlpin_xy}{{21}{9}{Side view of the control pin cell}{figure.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Side view of the control pin cell.}}{9}{figure.22}\protected@file@percent }
+\newlabel{fig:controlpin_yz}{{22}{9}{Side view of the control pin cell}{figure.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Side view of the guide thimble pin cell.}}{9}{figure.23}\protected@file@percent }
+\newlabel{fig:guidepin_xy}{{23}{9}{Side view of the guide thimble pin cell}{figure.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Side view of the guide thimble pin cell.}}{10}{figure.24}\protected@file@percent }
+\newlabel{fig:guidepin_yz}{{24}{10}{Side view of the guide thimble pin cell}{figure.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Five-factor formula coefficients for a pin cell with light water moderator.}}{10}{figure.25}\protected@file@percent }
+\newlabel{fig:FFFlight}{{25}{10}{Five-factor formula coefficients for a pin cell with light water moderator}{figure.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Five-factor formula coefficients for a pin cell with heavy water moderator.}}{10}{figure.26}\protected@file@percent }
+\newlabel{fig:FFFheavy}{{26}{10}{Five-factor formula coefficients for a pin cell with heavy water moderator}{figure.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Five-factor formula coefficients for a pin cell with graphite moderator.}}{10}{figure.27}\protected@file@percent }
+\newlabel{fig:FFFgraphite}{{27}{10}{Five-factor formula coefficients for a pin cell with graphite moderator}{figure.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Neutron flux distribution and fission site heatmap for the reactor fuel pin cell.}}{10}{figure.28}\protected@file@percent }
+\newlabel{fig:meshfuel}{{28}{10}{Neutron flux distribution and fission site heatmap for the reactor fuel pin cell}{figure.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Neutron flux distribution and fission site heatmap for the reactor burnable fuel pin cell.}}{10}{figure.29}\protected@file@percent }
+\newlabel{fig:meshburn}{{29}{10}{Neutron flux distribution and fission site heatmap for the reactor burnable fuel pin cell}{figure.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Neutron flux distribution and fission site heatmap for the reactor control pin cell.}}{11}{figure.30}\protected@file@percent }
+\newlabel{fig:meshcont}{{30}{11}{Neutron flux distribution and fission site heatmap for the reactor control pin cell}{figure.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Five-factor formula coefficients as function of increasing temperature.}}{11}{figure.31}\protected@file@percent }
+\newlabel{fig:Dopp5FF}{{31}{11}{Five-factor formula coefficients as function of increasing temperature}{figure.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces Decreasing k-effective as temperature increases due to Doppler broadening.}}{11}{figure.32}\protected@file@percent }
+\newlabel{fig:U238vsPu241}{{32}{11}{Decreasing k-effective as temperature increases due to Doppler broadening}{figure.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Decreasing k-effective as temperature increases due to Doppler broadening.}}{11}{figure.33}\protected@file@percent }
+\newlabel{fig:totalfission}{{33}{11}{Decreasing k-effective as temperature increases due to Doppler broadening}{figure.33}{}}
+\gdef \@abspage@last{11}
